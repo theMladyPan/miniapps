@@ -1,0 +1,33 @@
+(i__main__
+Penaznik
+p0
+(dp1
+S'money'
+p2
+F50.0
+sS'args'
+p3
+(dp4
+S'x'
+p5
+VIné...
+p6
+ssS'savings'
+p7
+F500.0
+sS'common'
+p8
+F102.43
+sS'bank'
+p9
+F552.43
+sS'history'
+p10
+(lp11
+V16:59:16 04/27/13\u000aupravené prostriedky: 500.0eur\u000aako u\u0161etrené peniaze na ú\u010dte.\u000aÚ\u010del: poc stav\u000a--------------------------------------------------\u000a
+p12
+aV17:00:30 04/27/13\u000aupravené prostriedky: 50.0eur\u000aako be\u017ené peniaze v hotovosti.\u000aÚ\u010del: poc stav\u000a--------------------------------------------------\u000a
+p13
+aV17:01:29 04/27/13\u000aupravené prostriedky: 52.43eur\u000aako be\u017ené peniaze na ú\u010dte.\u000aÚ\u010del: poc stav\u000a--------------------------------------------------\u000a
+p14
+asb.
