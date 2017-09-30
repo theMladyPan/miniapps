@@ -6,7 +6,7 @@ brightness.py needs to be run as 'superuser' (due to access to /sys/class/...)
 
 ## discover.py
 
-app used to discover network nodes (as well as their webservers).
+app used to discover network nodes (as well as their webservers). Uses swarm of threads to do so.
 
 ## plotv2.pyw
 

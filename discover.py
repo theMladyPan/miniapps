@@ -85,7 +85,10 @@ class Frame1(wx.Frame):
         self.discover.Disable()
         self.entry_subnet.Disable()
         for i in range(len(self.list_nodes.GetItems())):
-            self.list_nodes.Delete(i)
+            try:
+                self.list_nodes.Delete(i)
+            except wx._core.PyAssertionError:
+                pass
         prefix=self.entry_subnet.GetValue().replace("x","")
         wx.Yield()
         with open(os.devnull, 'wb') as devnull:
@@ -96,7 +99,7 @@ class Frame1(wx.Frame):
                 MultiP(queue, prefix, i, devnull)
 
                 self.gauge.SetValue(i)
-                self.countdown.Label="Approx. time: %02d:%02d"%((254-i)/60, (254-i)%60)
+                #self.countdown.Label="Approx. time: %02d:%02d"%((254-i)/60, (254-i)%60)
                 wx.Yield()
             count=254
 
