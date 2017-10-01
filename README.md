@@ -15,3 +15,7 @@ simple tool to draw graphs with help from builtin functions from math library
 ## serv80.py and clent80.py [unfinished]
 
 port 80 socket server/client combo for debugging webbrowsers.... [unfinished]
+
+## arg_parse/main.cpp
+
+little program/snippet to easily parse cli arguments inline
