@@ -69,10 +69,10 @@ class Penaznik:
     return pickle.load(file("wallet.rdf","r"))
 
   def skratky(self):
-    string= u"Definované skratky:\n-----------------------\n"
+    string= u"DefinovanÃ© skratky:\n-----------------------\n"
     for skratka in penaznik.args.keys():
-      string+= skratka+ " - "+ self.args.get(skratka)+'\n'
-    return string +'-----------------------'
+      string += f"{skratka} - {self.args.get(skratka)}" + '\n'
+    return f'{string}-----------------------'
 
 if __name__ == "__main__":
   try:

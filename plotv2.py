@@ -33,20 +33,20 @@ def append_item(item, c,r, cs=1, rs=1):
   return items[-1]
   
 def evaluate(key=0):
-    try:
-      data=items[-1].get().split(";")
-      x=np.arange(eval(data[1].split("<")[1].split(",")[0]),
-                  eval(data[1].split(",")[1][:-1])+eval(data[2].split("=")[1]),
-                  eval(data[2].split("=")[1])) #rozlisenie
-      exec(data[0])
-      plt.plot(x,y)
-      plt.show()
-    except NameError:
-      throw(sys.exc_info()[0], str(sys.exc_info()[1])+", hint: check variables.")
-    except SyntaxError:
-      throw(sys.exc_info()[0], str(sys.exc_info()[1])+", hint: check brackets.")
-    except ValueError:
-      pass
+  try:
+    data=items[-1].get().split(";")
+    x=np.arange(eval(data[1].split("<")[1].split(",")[0]),
+                eval(data[1].split(",")[1][:-1])+eval(data[2].split("=")[1]),
+                eval(data[2].split("=")[1])) #rozlisenie
+    exec(data[0])
+    plt.plot(x,y)
+    plt.show()
+  except NameError:
+    throw(sys.exc_info()[0], f"{str(sys.exc_info()[1])}, hint: check variables.")
+  except SyntaxError:
+    throw(sys.exc_info()[0], f"{str(sys.exc_info()[1])}, hint: check brackets.")
+  except ValueError:
+    pass
    
     
 main=Tk()
