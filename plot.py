@@ -49,24 +49,21 @@ def evaluate():
       break
     except:
       pass
-  
+
   grid_lines(mapa)
-  
+
   for x in range(-4000,4000):
     x=float(x/10.0)
     try:
       exec(items[3].get())
-    except NameError:
-      mapa.create_text(700,10,text="Bad syntax")
-      break
-    except SyntaxError:
+    except (NameError, SyntaxError):
       mapa.create_text(700,10,text="Bad syntax")
       break
     except ValueError:
       continue
     xp.append(x)
     yp.append(y)
-    
+
   for i in range(len(xp)-1):
     if abs(xp[i]-xp[i+1])>0.2:
       continue

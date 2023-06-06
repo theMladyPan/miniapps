@@ -111,12 +111,16 @@ class Frame1(wx.Frame):
                 if result == chr(0):
                     count -=1
 
-        self.entry_subnet.SetValue("%sx"%prefix)
+        self.entry_subnet.SetValue(f"{prefix}x")
         self.discover.Enable()
         self.entry_subnet.Enable()
 
     def OnList_nodesListboxDclick(self, event):
-        webbrowser.open('http://'+self.list_nodes.GetItems()[self.list_nodes.GetSelection()], new=1, autoraise=True)
+        webbrowser.open(
+            f'http://{self.list_nodes.GetItems()[self.list_nodes.GetSelection()]}',
+            new=1,
+            autoraise=True,
+        )
 
 if __name__ == '__main__':
     app = wx.PySimpleApp()
